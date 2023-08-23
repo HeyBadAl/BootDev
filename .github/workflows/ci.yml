@@ -31,6 +31,9 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Formatting CI
+        run: go fmt ./...
+
+      - name: test formatting 
         run: test -z $(go fmt ./...)
 
       - name: install staticcheck 
